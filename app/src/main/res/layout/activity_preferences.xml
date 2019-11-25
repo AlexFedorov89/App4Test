@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="6dp"
+    android:orientation="vertical">
+
+    <Switch
+        android:id="@+id/switchBluetoothRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:showText="false"
+        android:switchPadding="6dp"
+        android:text="@string/bluetooth_record"
+        android:thumbTint="@color/colorYellow"
+        android:theme="@style/SwitchesTheme"/>
+
+    <TextView
+        android:id="@+id/sampleRateView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sample_rate" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:checkedButton="@id/rb48kHz">
+
+        <RadioButton
+            android:id="@+id/rb48kHz"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorYellow"
+            android:tag="48100"
+            android:text="@string/_48khz" />
+
+        <RadioButton
+            android:id="@+id/rb32kHz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorYellow"
+            android:text="@string/_32khz" />
+
+        <RadioButton
+            android:id="@+id/rb16kHz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorYellow"
+            android:text="@string/_16khz" />
+
+        <RadioButton
+            android:id="@+id/rb8kHz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/colorYellow"
+            android:text="@string/_8khz" />
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="animation_duration">500</integer>
+    <integer name="bottom_menu_left_padding_def">16</integer>
+    <integer name="bottom_menu_left_padding_rec_portrait">80</integer>
+    <integer name="bottom_menu_left_padding_rec_landscape">230</integer>
+</resources>

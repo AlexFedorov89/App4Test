@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:orientation="horizontal">
+
+
+    <ImageButton
+        android:id="@+id/btnPlayRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="@color/colorYellow"
+        android:contentDescription="@string/playlist_play"
+        android:tint="#FFFFFF"
+        app:srcCompat="@drawable/ic_play" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="20"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:text="2019_11_24_13_59_00" />
+</LinearLayout>
