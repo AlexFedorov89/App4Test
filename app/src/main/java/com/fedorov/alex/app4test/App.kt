@@ -3,10 +3,11 @@ package com.fedorov.alex.app4test
 import android.app.Application
 import android.content.SharedPreferences
 
+const val APP_PREFERENCES = "settings"
+const val APP_PREFERENCES_BLUETOOTH_ON = "bluetooth_on"
+const val APP_PREFERENCES_SAMPLE_RATE = "sample_rate"
+
 class App : Application() {
-    val APP_PREFERENCES = "settings"
-    val APP_PREFERENCES_BLUETOOTH_ON = "bluetooth_on"
-    val APP_PREFERENCES_SAMPLE_RATE = "sample_rate"
 
     lateinit var pref: SharedPreferences
 
@@ -31,5 +32,4 @@ class App : Application() {
 
         pref = getSharedPreferences(APP_PREFERENCES, MODE_PRIVATE)
     }
-
 }

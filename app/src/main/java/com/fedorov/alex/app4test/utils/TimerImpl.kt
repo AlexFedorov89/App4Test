@@ -1,6 +1,6 @@
 package com.fedorov.alex.app4test.utils
 
-import com.fedorov.alex.app4test.viewModels.MainViewModel
+import com.fedorov.alex.app4test.ui.viewModels.MainViewModel
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*

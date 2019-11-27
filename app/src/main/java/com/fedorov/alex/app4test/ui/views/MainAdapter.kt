@@ -1,4 +1,4 @@
-package com.fedorov.alex.app4test.views
+package com.fedorov.alex.app4test.ui.views
 
 import android.view.LayoutInflater
 import android.view.View

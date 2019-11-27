@@ -1,4 +1,4 @@
-package com.fedorov.alex.app4test.views
+package com.fedorov.alex.app4test.ui.views
 
 import android.Manifest
 import android.animation.ValueAnimator
@@ -16,7 +16,8 @@ import androidx.core.view.updatePadding
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.fedorov.alex.app4test.R
-import com.fedorov.alex.app4test.viewModels.*
+import com.fedorov.alex.app4test.ui.viewModels.*
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 
 private const val REQUEST_RECORD_AUDIO_PERMISSION = 200
@@ -172,6 +173,18 @@ class MainActivity : AppCompatActivity(), MainActivityNavigator {
     private fun setVisibleMenuItemsDefault() {
         bottomMain.menu.findItem(R.id.navigation_done)?.isVisible = false
         bottomMain.menu.findItem(R.id.navigation_records)?.isVisible = true
+    }
+
+    override fun askUserRecordCancel() {
+        // TODO Change buttons color style, maybe more accessibility.
+        MaterialAlertDialogBuilder(this)
+            .setTitle(getString(R.string.dialog_alert_title_cancel_rec))
+            .setMessage(getString(R.string.dialog_alert_msg_cancel_rec))
+            .setPositiveButton(getString(R.string.dialog_alert_btn_positive_cancel_rec)) { _, _ ->
+                viewModel.homeBtnFromUI(false)
+            }
+            .setNegativeButton(getString(R.string.dialog_alert_btn_negative_cancel_rec), null)
+            .show();
     }
 
     private fun animateBottomAppBar(toDefault: Boolean = false) {

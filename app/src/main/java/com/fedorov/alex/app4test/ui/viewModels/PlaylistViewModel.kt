@@ -1,4 +1,4 @@
-package com.fedorov.alex.app4test.viewModels
+package com.fedorov.alex.app4test.ui.viewModels
 
 import android.media.MediaPlayer
 import android.util.Log
@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModel
 import com.fedorov.alex.app4test.data.Repository
 import com.fedorov.alex.app4test.data.Repository.records
 import com.fedorov.alex.app4test.data.model.Record
-import com.fedorov.alex.app4test.views.MainViewState
+import com.fedorov.alex.app4test.ui.views.MainViewState
 import java.io.IOException
 
 class PlaylistViewModel : ViewModel() {

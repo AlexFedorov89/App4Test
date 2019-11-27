@@ -1,25 +1,38 @@
-package com.fedorov.alex.app4test.viewModels
+package com.fedorov.alex.app4test.ui.viewModels
 
+// TODO Move all androids import to another class.
+//---------------------
 import android.annotation.TargetApi
 import android.app.Application
 import android.media.MediaRecorder
 import android.os.Build
 import android.util.Log
+//---------------------
+
 import androidx.annotation.RequiresApi
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+
+// TODO Think about this.
+//---------------------
 import com.fedorov.alex.app4test.App
+//---------------------
+
 import com.fedorov.alex.app4test.data.Repository
+
+// TODO Get rid of this callback.
+//---------------------
+import com.fedorov.alex.app4test.ui.views.MainActivityNavigator
+//---------------------
 import com.fedorov.alex.app4test.utils.ITimer
 import com.fedorov.alex.app4test.utils.TimerImpl
-import com.fedorov.alex.app4test.views.MainActivityNavigator
 import java.io.IOException
 
 class MainViewModel(
     private val cachePath: String, private val storagePath: String,
     application: Application,
-    val mainActivityNavigator: MainActivityNavigator
+    private val mainActivityNavigator: MainActivityNavigator
 ) : AndroidViewModel(application) {
 
     private val TAG = MainViewModel::class.java.simpleName
@@ -119,12 +132,16 @@ class MainViewModel(
         stopRecording(true)
     }
 
-    fun homeBtnFromUI() {
+    fun homeBtnFromUI(showAskDialog: Boolean = true) {
         when (recordingPresenter.isRecording || recordingPresenter.isOnPause) {
             true -> {
                 // cancel operation
                 //sendMsgToUI("Cancel")
-                stopRecording(false)
+                if (showAskDialog) {
+                    mainActivityNavigator.askUserRecordCancel()
+                } else {
+                    stopRecording(false)
+                }
             }
             false -> {
                 // open settings

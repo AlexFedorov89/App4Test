@@ -15,15 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".views.MainActivity">
+        <activity android:name="com.fedorov.alex.app4test.ui.views.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.PlaylistActivity" />
-        <activity android:name=".views.PreferenceActivity" />
+        <activity android:name="com.fedorov.alex.app4test.ui.views.PlaylistActivity" />
+        <activity android:name="com.fedorov.alex.app4test.ui.views.PreferenceActivity" />
     </application>
 
 </manifest>

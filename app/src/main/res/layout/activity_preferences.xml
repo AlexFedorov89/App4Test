@@ -7,18 +7,19 @@
 
     <Switch
         android:id="@+id/switchBluetoothRecord"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:showText="false"
-        android:switchPadding="6dp"
         android:text="@string/bluetooth_record"
-        android:thumbTint="@color/colorYellow"
-        android:theme="@style/SwitchesTheme"/>
+        android:theme="@style/SwitchesTheme"
+        android:thumbTint="@color/colorYellow" />
 
     <TextView
         android:id="@+id/sampleRateView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
         android:text="@string/sample_rate" />
 
     <RadioGroup

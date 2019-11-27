@@ -1,4 +1,4 @@
-package com.fedorov.alex.app4test.views
+package com.fedorov.alex.app4test.ui.views
 
 import com.fedorov.alex.app4test.data.model.Record
 

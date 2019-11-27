@@ -1,4 +1,4 @@
-package com.fedorov.alex.app4test.views
+package com.fedorov.alex.app4test.ui.views
 
 import android.content.Context
 import android.content.Intent
@@ -8,7 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.fedorov.alex.app4test.R
-import com.fedorov.alex.app4test.viewModels.PlaylistViewModel
+import com.fedorov.alex.app4test.ui.viewModels.PlaylistViewModel
 import kotlinx.android.synthetic.main.activity_playlist.*
 
 class PlaylistActivity : AppCompatActivity() {

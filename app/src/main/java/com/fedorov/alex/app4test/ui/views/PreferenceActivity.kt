@@ -1,4 +1,4 @@
-package com.fedorov.alex.app4test.views
+package com.fedorov.alex.app4test.ui.views
 
 import android.content.Context
 import android.content.Intent
@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.fedorov.alex.app4test.App
 import com.fedorov.alex.app4test.R
 import kotlinx.android.synthetic.main.activity_preferences.*
-
 
 class PreferenceActivity : AppCompatActivity() {
     companion object {
@@ -44,7 +43,7 @@ class PreferenceActivity : AppCompatActivity() {
 
     private fun setButtonsValues(listRadioButtons: Map<Int, Int>) {
         // Set switch bluetooth button value from shared preferences.
-        switchBluetoothRecord.setChecked((application as App).bluetoothOn)
+        switchBluetoothRecord.isChecked = (application as App).bluetoothOn
 
         // Set radio button sample rate button value from shared preferences.
         listRadioButtons.filterValues { it == (application as App).sampleRate }.map {

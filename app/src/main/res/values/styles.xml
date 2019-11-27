@@ -6,10 +6,12 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:colorButtonNormal">@color/colorBlack</item>
     </style>
 
     <style name="SwitchesTheme" parent="AppTheme">
         <item name="colorControlActivated">#c6a700</item>
     </style>
-
+    
 </resources>

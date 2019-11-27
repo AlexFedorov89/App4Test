@@ -10,4 +10,8 @@
     <string name="_32khz">32kHz</string>
     <string name="_16khz">16kHz</string>
     <string name="_8khz">8kHz</string>
+    <string name="dialog_alert_title_cancel_rec">Cancel recording</string>
+    <string name="dialog_alert_msg_cancel_rec">Don\'t save this recording?</string>
+    <string name="dialog_alert_btn_positive_cancel_rec">Ok</string>
+    <string name="dialog_alert_btn_negative_cancel_rec">Cancel</string>
 </resources>

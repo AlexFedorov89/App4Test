@@ -1,4 +1,4 @@
-package com.fedorov.alex.app4test.viewModels
+package com.fedorov.alex.app4test.ui.viewModels
 
 sealed class RecordingState
 object NotRecording : RecordingState()
