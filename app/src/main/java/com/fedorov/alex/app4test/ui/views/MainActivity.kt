@@ -53,12 +53,6 @@ class MainActivity : AppCompatActivity(), MainActivityNavigator {
         }
     }
 
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-
-        timerView.text = viewModel.time()
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -159,7 +153,7 @@ class MainActivity : AppCompatActivity(), MainActivityNavigator {
     }
 
     private fun returnAppBarToDefault() {
-        timerView.text = getString(R.string.blankTime)
+        //timerView.text = getString(R.string.blankTime)
         setVisibleMenuItemsDefault()
 
         bottomMain.navigationIcon =

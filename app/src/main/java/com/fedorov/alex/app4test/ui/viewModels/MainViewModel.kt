@@ -39,15 +39,19 @@ class MainViewModel(
     private val recordingPresenter = RecordingPresenter()
     private var recorder: MediaRecorder? = null
 
-    private val timer: ITimer = TimerImpl(this)
+    private val timer: ITimer = TimerImpl()
     private val timerTextLiveData: MutableLiveData<String> = MutableLiveData()
     private val msgToView: MutableLiveData<String> = MutableLiveData()
 
     val recordingState: MutableLiveData<RecordingState> = MutableLiveData()
 
-    fun time(): String = timer.time()
+    //fun time(): String = timer.time()
     fun timerText(): LiveData<String> = timerTextLiveData
     fun msgToView(): LiveData<String> = msgToView
+
+    init {
+        timer.time().observeForever { this.timerTextLiveData.postValue(it) }//timerTextLiveData = timer.time()
+    }
 
     fun loadTimerText(v: String) {
         this.timerTextLiveData.postValue(v)
